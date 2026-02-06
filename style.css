@@ -26,7 +26,7 @@ a {
 .top-bar {
     background: #000;
     color: #666;
-    font-size: 16px;
+    font-size: 18px;
     padding: 20px 0;
     border-bottom: 1px solid #222;
 }
@@ -63,7 +63,7 @@ a {
 
 .logo-box,img.logo {
     height: 60px;
-    padding-left: 10%;
+    padding-left: 11%;
    
 }
 
@@ -79,7 +79,7 @@ a {
     padding: 0 20px ;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 20px;
     
 }
 
@@ -109,7 +109,7 @@ a {
 .hero {
     height: 80vh;
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                url('accueil shop.png') no-repeat center center/cover;
+                url('accueil.avif') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,7 +117,7 @@ a {
     color: white;
 }
 
-.brand-logo { width: 95px; margin-bottom: 20px; }
+.brand-logo { width: 120px; margin-bottom: 20px; }
 
 .hero h1 {
     font-size: 3.5rem;
@@ -173,7 +173,7 @@ a {
 }
 
 .orange-bg { background-color: var(--orange); color: white; }
-.grey-bg { background-color: #e0e0e0; color: #333; }
+.grey-bg { background-color: #e0e0e0; color: white; }
 
 .promo-card h2 {
     font-size: 2.5rem;
