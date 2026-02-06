@@ -1,0 +1,255 @@
+/* Variables et Reset */
+:root {
+    --orange: #ff6600;
+    --dark: #111;
+    --grey: #f4f4f4;
+    --text-light: #888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Barre Supérieure */
+.top-bar {
+    background: #000;
+    color: #666;
+    font-size: 15px;
+    padding: 20px 0;
+    border-bottom: 1px solid #222;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.top-nav a {
+    margin-left: 25px;
+}
+
+/* Header Principal */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding-right: 5%;
+}
+
+.logo-box {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    
+}
+
+.logo-box,img.logo {
+    height: 60px;
+    padding-left: 10%;
+   
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    
+}
+
+.main-nav ul li a {
+    text-align: left;
+    padding: 0 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    right: 20px;
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    left: 20px;
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-icon span {
+    background: var(--orange);
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('accueil shop.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.brand-logo { width: 95px; margin-bottom: 20px; }
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.btn-outline {
+    border: 1px solid white;
+    padding: 12px 25px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: black;
+}
+
+.dots {
+    margin-top: 40px;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background: #555;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.dot.active { background: white; }
+
+/* Promo Grid */
+.promo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 350px;
+}
+
+.promo-card {
+    position: relative;
+    padding: 50px;
+    display: flex;
+    overflow: hidden;
+}
+
+.orange-bg { background-color: var(--orange); color: white; }
+.grey-bg { background-color: #e0e0e0; color: #333; }
+
+.promo-card h2 {
+    font-size: 2.5rem;
+    max-width: 300px;
+    line-height: 1;
+    margin-bottom: 20px;
+    border-left: 3px solid white;
+    padding-left: 20px;
+}
+
+.grey-bg h2 { border-color: white; }
+
+.links a {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.promo-img {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 500px;
+}
+
+/* Section Blog Title */
+.blog-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.blog-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* RESPONSIVITÉ */
+
+/* Tablette (Max 1024px) */
+@media (max-width: 1024px) {
+    .hero h1 { font-size: 2.5rem; }
+    .promo-card h2 { font-size: 1.8rem; }
+}
+
+/* Téléphone (Max 768px) */
+@media (max-width: 768px) {
+    .top-bar { display: none; } /* On cache la petite barre sur mobile */
+    
+    .main-header {
+        height: auto;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+    
+    .main-nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-nav ul li a { padding: 5px 10px; }
+
+    .hero { height: 60vh; }
+    .hero h1 { font-size: 2rem; }
+
+    .promo-grid {
+        grid-template-columns: 1fr; /* Une seule colonne */
+        height: auto;
+    }
+    
+    .promo-card {
+        height: 300px;
+        padding: 30px;
+    }
+
+    .promo-img {
+        width: 400px;
+    }
+}
